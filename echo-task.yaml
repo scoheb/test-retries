@@ -16,6 +16,6 @@ spec:
           echo "This is the last retry."
           exit 0;
         fi
-        echo "The PipelineTask has retried $(context.task.retry-count) times."
+        echo "The PipelineTask has retried $(params.pipelineTask-retry-count) times."
         echo "pipelineTask-retries = $(params.pipelineTask-retries)" 
         exit 1
