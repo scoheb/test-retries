@@ -1,0 +1,14 @@
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: echo
+spec:
+  steps:
+    - name: collect-data
+      image: quay.io/konflux-ci/release-service-utils:e633d51cd41d73e4b3310face21bb980af7a662f
+      script: |
+        #!/usr/bin/env sh
+        set -x
+        SINGLE_COMPONENT_MODE="scott"
+        echo $SINGLE_COMPONENT_MODE

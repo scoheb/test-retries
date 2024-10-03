@@ -1,0 +1,17 @@
+---
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: test-pipeline
+spec:
+  tasks:
+    - name: echo
+      taskRef:
+        resolver: "git"
+        params:
+          - name: url
+            value: https://github.com/scoheb/test-retries
+          - name: revision
+            value: main
+          - name: pathInRepo
+            value: echo-task.yaml

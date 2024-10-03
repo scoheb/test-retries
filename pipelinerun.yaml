@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  generateName: test-plr
+spec:
+  PipelineRef:
+    resolver: "git"
+    params:
+      - name: url
+        value: https://github.com/scoheb/test-retries
+      - name: revision
+        value: main
+      - name: pathInRepo
+        value: pipeline.yaml
