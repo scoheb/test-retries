@@ -16,3 +16,8 @@ spec:
             value: main
           - name: pathInRepo
             value: echo-task.yaml
+      params:
+        - name: pipelineTask-retries
+          default: "$(context.pipelineTask.retries)"
+        - name: pipelineTask-retry-count
+          default: "$(context.task.retry-count)"
