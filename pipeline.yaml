@@ -18,6 +18,6 @@ spec:
             value: echo-task.yaml
       params:
         - name: pipelineTask-retries
-          default: "$(context.pipelineTask.retries)"
+          value: "$(context.pipelineTask.retries)"
         - name: pipelineTask-retry-count
-          default: "$(context.task.retry-count)"
+          value: "$(context.task.retry-count)"
