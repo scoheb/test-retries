@@ -6,7 +6,7 @@ metadata:
 spec:
   tasks:
     - name: echo
-      retries: 2
+      retries: 20
       taskRef:
         resolver: "git"
         params:
